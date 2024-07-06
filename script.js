@@ -10,7 +10,7 @@ forgivenessForm.addEventListener('submit', function(event) {
     const forgiveValue = formData.get('forgive');
 
     if (forgiveValue === 'yes') {
-        window.location.href = 'anotherchance.html';
+        window.location.href = 'another_chance.html';
     } else if (forgiveValue === 'no') {
         window.location.href = 'sorry.html';
     }
