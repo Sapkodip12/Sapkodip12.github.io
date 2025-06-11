@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gurkha Solutions - Free Cleaning Services</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gurkha Solutions - Cleaning Services</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Gurkha Solutions</h1>
-        <p>Your trusted partner for a cleaner space</p>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#booking">Book Now</a>
-            <a href="#upload">Evaluate</a>
-            <a href="#feedback">Feedback</a>
-        </nav>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Gurkha Solutions</h1>
+      <p>Professional Cleaning Services - 100% Free Appointment Booking</p>
+    </div>
+  </header>
 
-    <section id="hero">
-        <img src="cleaning.jpg" alt="Cleaning Services">
-        <h2>Professional Cleaning, Absolutely Free!</h2>
-        <p>Book your free appointment today</p>
+  <section class="hero">
+    <img src="images/cleaning-hero.jpg" alt="Cleaning Service Hero Image" />
+  </section>
+
+  <main>
+    <section class="about">
+      <h2>Why Choose Us?</h2>
+      <p>We provide high-quality, reliable, and affordable cleaning services. Book your appointment for free and let our team make your space spotless!</p>
     </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Home Cleaning</li>
-            <li>Office Cleaning</li>
-            <li>Move-in/out Cleaning</li>
-            <li>Carpet & Window Cleaning</li>
-        </ul>
+    <section class="booking-form">
+      <h2>Book a Free Cleaning Appointment</h2>
+      <form name="booking" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="booking" />
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <button type="submit">Book Now</button>
+      </form>
     </section>
 
-    <section id="booking">
-        <h2>Book a Free Appointment</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="text" placeholder="Your Address" required>
-            <input type="date" required>
-            <button type="submit">Book Now</button>
-        </form>
+    <section class="upload-photo">
+      <h2>Photo Upload for Cleaning Estimate</h2>
+      <form name="photo-evaluation" method="POST" enctype="multipart/form-data" data-netlify="true">
+        <input type="hidden" name="form-name" value="photo-evaluation" />
+        <label for="photo-name">Name:</label>
+        <input type="text" id="photo-name" name="name" required />
+
+        <label for="photo-email">Email:</label>
+        <input type="email" id="photo-email" name="email" required />
+
+        <label for="photo-upload">Upload a Photo:</label>
+        <input type="file" id="photo-upload" name="photo" accept="image/*" required />
+
+        <button type="submit">Submit Photo</button>
+      </form>
     </section>
 
-    <section id="upload">
-        <h2>Photo Evaluation</h2>
-        <p>Upload a photo of the area you want cleaned to help us estimate the effort</p>
-        <form>
-            <input type="file" accept="image/*" required>
-            <button type="submit">Upload</button>
-        </form>
-    </section>
+    <section class="feedback">
+      <h2>Customer Feedback</h2>
+      <form name="feedback" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="feedback" />
+        <label for="feedback-name">Name:</label>
+        <input type="text" id="feedback-name" name="name" required />
 
-    <section id="feedback">
-        <h2>Feedback</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <textarea placeholder="Write your feedback here..." required></textarea>
-            <button type="submit">Submit Feedback</button>
-        </form>
-    </section>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-    <footer>
-        <p>&copy; 2025 Gurkha Solutions. All rights reserved.</p>
-    </footer>
+        <button type="submit">Send Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gurkha Solutions. All rights reserved.</p>
+  </footer>
 </body>
+
 </html>
